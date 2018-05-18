@@ -1,10 +1,13 @@
-# Getting Started
+# Angular Tour of Heroes with SystemJS and PatternFly-NG
+This branch uses the last Tour of Heroes version that is loaded via SystemJS instead of WebPack.  It is used to work out issues with SystemJS and PatternFly-NG.
+
+## Getting Started
 
 Super simple Angular app with 1 module and 2 routes 
 
 ## Get the Code
 ```
-git clone https://github.com/johnpapa/angular-tour-of-heroes.git toh
+git clone -b systemjs-patternfly-ng git@github.com:ssilvert/angular-tour-of-heroes.git toh
 cd toh
 npm i
 ```

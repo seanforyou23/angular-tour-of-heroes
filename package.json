@@ -20,11 +20,20 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4",
     "angular-in-memory-web-api": "^0.3.1",
-    "systemjs": "0.19.40"
+    "angular-tree-component": "^7.2.0",
+    "c3": "^0.6.1",
+    "core-js": "^2.4.1",
+    "d3": "^5.4.0",
+    "lodash": "^4.17.10",
+    "ngx-datatable": "^1.0.3",
+    "patternfly": "^3.46.0",
+    "patternfly-ng": "^3.1.5",
+    "rxjs": "^5.1.0",
+    "rxjs-system-bundle": "^5.1.0",
+    "systemjs": "0.19.40",
+    "systemjs-plugin-babel": "0.0.25",
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.38",
@@ -44,6 +53,6 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.0"
+    "typescript": "^2.3.4"
   }
 }

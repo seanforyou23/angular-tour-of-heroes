@@ -11,16 +11,20 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
 import { HeroService } from './hero.service';
 import { HeroSearchComponent } from './hero-search.component';
 
+import { EmptyStateComponent } from 'patternfly-ng/empty-state';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpModule,
+//    NotificationModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
   ],
   declarations: [
     AppComponent,
+    EmptyStateComponent,
     HeroSearchComponent,
     routedComponents
   ],
