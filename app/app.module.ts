@@ -11,7 +11,9 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
 import { HeroService } from './hero.service';
 import { HeroSearchComponent } from './hero-search.component';
 
-import { EmptyStateComponent } from 'patternfly-ng/empty-state';
+import {SideNavComponent} from './side-nav/side-nav.component';
+import { EmptyStateModule } from 'patternfly-ng/empty-state';
+import { NavigationModule } from 'patternfly-ng/navigation';
 
 @NgModule({
   imports: [
@@ -19,14 +21,15 @@ import { EmptyStateComponent } from 'patternfly-ng/empty-state';
     FormsModule,
     AppRoutingModule,
     HttpModule,
-//    NotificationModule,
+    NavigationModule,
+    EmptyStateModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
   ],
   declarations: [
     AppComponent,
-    EmptyStateComponent,
     HeroSearchComponent,
-    routedComponents
+    routedComponents,
+    SideNavComponent,
   ],
   providers: [
     HeroService

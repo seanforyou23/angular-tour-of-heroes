@@ -1,11 +1,18 @@
 <h3>Top Heroes</h3>
 <div class="row">
-    <div class="col-sm-12">
-      <div class="form-group">
-        <pfng-empty-state [config]="emptyStateConfig" (onActionSelect)="handleAction($event)"></pfng-empty-state>
-      </div>
+  <div class="col-sm-12">
+    <div class="form-group">
+      <pfng-empty-state [config]="emptyStateConfig" (onActionSelect)="handleAction($event)"></pfng-empty-state>
     </div>
   </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="form-group">
+      <side-nav-component></side-nav-component>
+    </div>
+  </div>
+</div>
 <div class="grid grid-pad">
   <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
     <div class="module hero">

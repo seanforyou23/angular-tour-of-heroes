@@ -29,18 +29,28 @@ System.config({
     // other libraries
     'rxjs': 'npm:rxjs',
     'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-    'angular-tree-component': 'npm:angular-tree-component/dist/angular-tree-component.umd.js',
+    
+    // libraries that may be required by patternfly-ng, depending on which modules are loaded
+  //  'angular-tree-component': 'npm:angular-tree-component/dist/angular-tree-component.umd.js',
     'lodash': 'npm:lodash/lodash.js',
-    'ng2-dragula': 'npm:ng2-dragula/bundles/ng2-dragula.umd.js',
-    '@swimlane/ngx-datatable': 'npm:@swimlane/ngx-datatable/release/index.js',
-    'd3': 'npm:d3/dist/d3.js',
-    'c3': 'npm:c3/c3.js',
+  //  'ng2-dragula': 'npm:ng2-dragula/bundles/ng2-dragula.umd.js',
+  //  '@swimlane/ngx-datatable': 'npm:@swimlane/ngx-datatable/release/index.js',
+  //  'd3': 'npm:d3/dist/d3.js',
+  //  'c3': 'npm:c3/c3.js',
     
-    'ngx-bootstrap/dropdown': 'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.js',
-    'ngx-bootstrap/popover': 'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.js',
-    'ngx-bootstrap/tooltip': 'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.js',
     
+    
+    // You can load the patternfly-ng main module or load only the needed submodules for better performance
+    //'patternfly-ng': 'npm:patternfly-ng',
     'patternfly-ng/empty-state': 'npm:patternfly-ng/empty-state',
+    'patternfly-ng/navigation': 'npm:patternfly-ng/navigation',
+    'patternfly-ng/utilities': 'npm:patternfly-ng/utilities',
+    
+    // ngx-bootstrap
+    'ngx-bootstrap': 'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js',
+    'ngx-bootstrap/dropdown': 'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js',
+    'ngx-bootstrap/popover': 'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js',
+    'ngx-bootstrap/tooltip': 'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js',
     
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
     'systemjs-babel-build': 'npm:systemjs-plugin-babel/systemjs-babel-browser.js'
@@ -67,7 +77,13 @@ System.config({
     'api' : { defaultExtension : 'js' },
    // 'rxjs': { defaultExtension: 'js' },
     'lodash': { defaultExtension: 'js' },
+    
+   // 'patternfly-ng': { main: './index.js', defaultExtension: 'js' },
     'patternfly-ng/empty-state': { main: './index.js', defaultExtension: 'js' },
+    'patternfly-ng/navigation': { main: './index.js', defaultExtension: 'js' },
+    'patternfly-ng/utilities': { main: './index.js', defaultExtension: 'js' },
+    
+    
     'rxjs': { main: './bundles/Rx.js', defaultExtension: 'js' },
 
     // barrels
