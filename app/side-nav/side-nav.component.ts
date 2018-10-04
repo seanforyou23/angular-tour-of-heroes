@@ -4,12 +4,12 @@ import {
   OnInit, ViewEncapsulation
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavigationItemConfig } from 'patternfly-ng/navigation';
+// import { NavigationItemConfig } from 'patternfly-ng/navigation';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
   selector: 'side-nav-component',
-  styles: [`    
+  styles: [`
     .faux-layout {
       position: fixed;
       top: 37px;
@@ -34,7 +34,7 @@ import { NavigationItemConfig } from 'patternfly-ng/navigation';
       margin-top: 15px;
       margin-left: 30px;
     }
-    
+
     .navbar-brand-txt {
       line-height: 34px;
     }
@@ -44,7 +44,8 @@ import { NavigationItemConfig } from 'patternfly-ng/navigation';
 export class SideNavComponent implements OnInit {
 
   showExample: boolean = false;
-  navigationItems: NavigationItemConfig[];
+  // navigationItems: NavigationItemConfig[];
+  navigationItems: any[];
   actionText: string = '';
 
   constructor(private chRef: ChangeDetectorRef, private router: Router) {
@@ -55,12 +56,12 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Dashboard',
         iconStyleClass: 'fa fa-dashboard',
-        url: '/navigation/dashboard'
+        url: '/dashboard'
       },
       {
         title: 'Dolor',
         iconStyleClass: 'fa fa-shield',
-        url: '/navigation/dolor',
+        url: '/dashboard',
         badges: [
           {
             count: 1283,
@@ -77,7 +78,7 @@ export class SideNavComponent implements OnInit {
             children: [
               {
                 title: 'Recteque',
-                url: '/navigation/ipsum/intellegam/recteque',
+                url: '/dashboard',
                 badges: [
                   {
                     count: 6,
@@ -88,7 +89,7 @@ export class SideNavComponent implements OnInit {
               },
               {
                 title: 'Suavitate',
-                url: '/navigation/ipsum/intellegam/suavitate',
+                url: '/dashboard',
                 badges: [
                   {
                     count: 2,
@@ -98,7 +99,7 @@ export class SideNavComponent implements OnInit {
               },
               {
                 title: 'Vituperatoribus',
-                url: '/navigation/ipsum/intellegam/vituperatoribus',
+                url: '/dashboard',
                 badges: [
                   {
                     count: 18,
@@ -114,7 +115,7 @@ export class SideNavComponent implements OnInit {
             children: [
               {
                 title: 'Exerci',
-                url: '/navigation/ipsum/copiosae/exerci',
+                url: '/dashboard',
                 badges: [
                   {
                     count: 2,
@@ -130,7 +131,7 @@ export class SideNavComponent implements OnInit {
               },
               {
                 title: 'Quaeque',
-                url: '/navigation/ipsum/copiosae/quaeque',
+                url: '/dashboard',
                 badges: [
                   {
                     count: 0,
@@ -146,7 +147,7 @@ export class SideNavComponent implements OnInit {
               },
               {
                 title: 'Utroque',
-                url: '/navigation/ipsum/copiosae/utroque',
+                url: '/dashboard',
                 badges: [
                   {
                     count: 1,
@@ -167,21 +168,21 @@ export class SideNavComponent implements OnInit {
             children: [
               {
                 title: 'Novum',
-                url: '/navigation/ipsum/patrioque/novum'
+                url: '/dashboard'
               },
               {
                 title: 'Pericula',
-                url: '/navigation/ipsum/patrioque/pericula'
+                url: '/dashboard'
               },
               {
                 title: 'Gubergren',
-                url: '/navigation/ipsum/patrioque/gubergren'
+                url: '/dashboard'
               }
             ]
           },
           {
             title: 'Accumsan',
-            url: '/navigation/ipsum/Accumsan',
+            url: '/dashboard',
             badges: [
               {
                 count: 2,
@@ -206,15 +207,15 @@ export class SideNavComponent implements OnInit {
             children: [
               {
                 title: 'Delicatissimi',
-                url: '/navigation/amet/detracto/delicatissimi'
+                url: '/dashboard'
               },
               {
                 title: 'Aliquam',
-                url: '/navigation/amet/detracto/aliquam'
+                url: '/dashboard'
               },
               {
                 title: 'Principes',
-                url: '/navigation/amet/detracto/principes'
+                url: '/dashboard'
               }
             ]
           },
@@ -223,15 +224,15 @@ export class SideNavComponent implements OnInit {
             children: [
               {
                 title: 'Convenire',
-                url: '/navigation/amet/mediocrem/convenire'
+                url: '/dashboard'
               },
               {
                 title: 'Nonumy',
-                url: '/navigation/amet/mediocrem/nonumy'
+                url: '/dashboard'
               },
               {
                 title: 'Deserunt',
-                url: '/navigation/amet/mediocrem/deserunt'
+                url: '/dashboard'
               }
             ]
           },
@@ -240,33 +241,33 @@ export class SideNavComponent implements OnInit {
             children: [
               {
                 title: 'Aeque',
-                url: '/navigation/amet/corrumpit/aeque'
+                url: '/dashboard'
               },
               {
                 title: 'Delenit',
-                url: '/navigation/amet/corrumpit/delenit'
+                url: '/dashboard'
               },
               {
                 title: 'Qualisque',
-                url: '/navigation/amet/corrumpit/qualisque'
+                url: '/dashboard'
               }
             ]
           },
           {
             title: 'urbanitas',
-            url: '/navigation/amet/urbanitas'
+            url: '/dashboard'
           }
         ]
       },
       {
         title: 'Adipscing',
         iconStyleClass: 'fa fa-graduation-cap',
-        url: '/navigation/adipscing'
+        url: '/dashboard'
       },
       {
         title: 'Lorem',
         iconStyleClass: 'fa fa-gamepad',
-        url: '/navigation/lorem'
+        url: '/dashboard'
       }
     ];
   }
@@ -276,11 +277,11 @@ export class SideNavComponent implements OnInit {
     this.chRef.detectChanges();
   }
 
-  onItemClicked($event: NavigationItemConfig): void {
+  onItemClicked($event: any): void {
     this.actionText += 'Item Clicked: ' + $event.title + '\n';
   }
 
-  onNavigation($event: NavigationItemConfig): void {
+  onNavigation($event: any): void {
     this.actionText += 'Navigation event fired: ' + $event.title + '\n';
   }
 }

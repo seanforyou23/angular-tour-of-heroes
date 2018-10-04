@@ -28,7 +28,7 @@
     "lodash": "^4.17.10",
     "ngx-datatable": "^1.0.3",
     "patternfly": "^3.46.0",
-    "patternfly-ng": "^3.1.5",
+    "patternfly-ng": "file:../seanforyou23-patternfly-ng/patternfly-ng-0.0.0-semantically-released.tgz",
     "rxjs": "^5.1.0",
     "rxjs-system-bundle": "^5.1.0",
     "systemjs": "0.19.40",
